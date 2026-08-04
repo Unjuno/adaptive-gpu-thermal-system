@@ -4,6 +4,14 @@ An open research project for adaptive GPU temperature control using staged refri
 
 > **Project status:** Conceptual and unvalidated. No claim is currently made that the proposed system is novel, efficient, safe, commercially viable, or ready for deployment.
 
+## 日本語概要
+
+本プロジェクトは、GPUを常に最低温度まで冷却するのではなく、計算性能、長期信頼性、冷却設備の消費電力、結露条件を考慮した適切な温度帯に維持する熱管理方式を研究するものです。
+
+低負荷時に複数の密閉冷媒ユニットを冷却・凝縮して利用可能な状態へ準備し、GPU負荷の上昇時に必要なユニットだけを段階的または並列に投入します。さらに、海水・湖水による放熱、自然水設備の自動保守、既存の水流・圧力差からのエネルギー回収、排熱の養殖・温室などへの二次利用も研究対象に含みます。
+
+詳細は [`docs/system-concept.md`](docs/system-concept.md) を参照してください。
+
 ## Purpose
 
 This project explores a variable-capacity thermal-management system that maintains GPUs within an appropriate operating temperature band instead of continuously driving them toward the lowest possible temperature.
@@ -114,9 +122,9 @@ hardware/       Hardware, piping, mechanical, and CAD designs
 software/       Control, monitoring, and automation software
 simulation/     Thermal, fluid, workload, and control simulations
 robotics/       Inspection, cleaning, and repair software
- docs/           Specifications, assumptions, and research notes
- diagrams/       General-purpose diagrams and figures
- LICENSES/       Full license texts
+docs/           Specifications, assumptions, and research notes
+diagrams/       General-purpose diagrams and figures
+LICENSES/       Full license texts
 ```
 
 Directories will be added as work begins.
