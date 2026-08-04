@@ -10,7 +10,11 @@ An open research project for adaptive GPU temperature control using staged refri
 
 低負荷時に複数の密閉冷媒ユニットを冷却・凝縮して利用可能な状態へ準備し、GPU負荷の上昇時に必要なユニットだけを段階的または並列に投入します。さらに、海水・湖水による放熱、自然水設備の自動保守、既存の水流・圧力差からのエネルギー回収、排熱の養殖・温室などへの二次利用も研究対象に含みます。
 
-詳細は [`docs/system-concept.md`](docs/system-concept.md) を参照してください。
+### 構想の基準文書
+
+会話で確定した設計意図、重要な誤解の修正、未確定事項まで含む詳細な日本語記録は、[`docs/concept-master-ja.md`](docs/concept-master-ja.md) に保存しています。
+
+将来チャット履歴や外部コンテキストが失われた場合は、この文書をプロジェクト再開時の基準としてください。文書一覧と優先順位は [`docs/README.md`](docs/README.md) にあります。
 
 ## Purpose
 
@@ -100,20 +104,11 @@ Inspection, cleaning, and repair robots
 
 ## Documentation
 
-The detailed working specification is maintained in [`docs/system-concept.md`](docs/system-concept.md).
+- [`docs/concept-master-ja.md`](docs/concept-master-ja.md): canonical Japanese concept record and context-preservation document;
+- [`docs/system-concept.md`](docs/system-concept.md): initial English engineering concept specification;
+- [`docs/README.md`](docs/README.md): documentation index and interpretation order.
 
-Planned documentation areas include:
-
-- thermodynamic assumptions and state diagrams;
-- refrigerant-module state transitions;
-- GPU workload and thermal models;
-- control algorithms;
-- heat-exchanger design;
-- natural-water intake and discharge constraints;
-- robotic maintenance concepts;
-- power-recovery and secondary-heat-use evaluations;
-- safety, environmental, and regulatory requirements;
-- experimental results and failure analyses.
+Planned documentation areas include thermodynamic assumptions, module state transitions, GPU workload models, control algorithms, heat-exchanger design, water-side constraints, robotic maintenance, energy recovery, secondary heat use, safety, and experimental results.
 
 ## Repository structure
 
@@ -143,10 +138,6 @@ See [`LICENSE.md`](LICENSE.md) and the full texts under [`LICENSES/`](LICENSES/)
 
 This project may involve pressurized refrigerants, pressure vessels, electrical equipment, seawater or lake-water intake systems, rotating machinery, and thermal hazards. Concept documents and simulations are not construction approval. Any physical implementation requires qualified engineering review, applicable legal and environmental approvals, pressure-system protection, refrigerant compliance, electrical protection, leak detection, and fail-safe shutdown design.
 
-## Current priorities
+## Current stage
 
-1. Define one refrigerant module and its state transitions.
-2. Define the GPU thermal-load model and target operating band.
-3. Establish mass, energy, and time-balance equations.
-4. Compare the proposed architecture with conventional liquid cooling and thermal storage.
-5. Build a simulation before considering physical hardware.
+The repository currently preserves the concept. Specific refrigerants, pressures, temperatures, dimensions, flow rates, valve arrangements, heat exchangers, generator output, and aquaculture targets are intentionally left unresolved until a later design phase.
